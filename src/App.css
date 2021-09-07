@@ -1,0 +1,35 @@
+.menu{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+ background-color: #f899a4;
+}
+
+.menu ul li{
+  list-style: none;
+  padding-right: 20px;
+}
+
+.menu ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.count{
+  padding-right: 10px;
+}
+
+.react-3d-carousel .slider-container .slider-content .slider-single .slider-single-content{
+  height: 550px;
+}
+
+@media screen and (max-width: 1137px) {
+  .react-3d-carousel .slider-container .slider-content .slider-single .slider-single-content{
+    height: 100%;
+  }
+  .react-3d-carousel{
+    height: 100%;
+  }
+}
