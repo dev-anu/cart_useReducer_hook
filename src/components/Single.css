@@ -45,3 +45,33 @@
     color: #56403a;
     border: 1px solid #56403a;
 }
+
+.product_btns a{
+    border: none;
+    background: transparent;
+    border: 1px solid #FFAAAF;
+    padding: 10px;
+    color: #F27988;
+    width: 100px;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+}
+
+.product_btns a:hover{
+    color: #56403a;
+    border: 1px solid #56403a;
+}
+
+.content_brand{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.content_price{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 90%;
+}

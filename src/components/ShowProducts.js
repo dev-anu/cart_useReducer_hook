@@ -10,7 +10,7 @@ function ShowProducts() {
         <h1 style={{textAlign:"center"}}>Featured Products</h1>
         <div style={{display:'flex',flexWrap:'wrap', width:'90%', margin:"10px auto"}}>
             {
-                products.map(product=> <SingleProduct product={product}/>)
+                products.map(product=> <SingleProduct key={product?.id} product={product}/>)
             }
         </div>
         </>

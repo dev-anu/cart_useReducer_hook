@@ -1,17 +1,26 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import ShowProducts from './components/ShowProducts';
-import Slider from './components/Slider';
-import FeatureProduct from './Data/FeatureProduct';
+import {BrowserRouter,Route} from 'react-router-dom'
+import Home from './pages/Home';
+import ProductDetails from './components/ProductDetails';
+import SingleProductContext from './Data/SingleProductContext';
+import CartContextProvider from './Data/CartContext';
+import Cart from './components/Cart';
+
 
 function App() {
   return (
     <div className="App">
-     <Navbar/>
-     <Slider/>
-     <FeatureProduct>
-       <ShowProducts/>
-     </FeatureProduct>
+    <BrowserRouter>
+    <CartContextProvider>
+    <SingleProductContext>
+    <Navbar/>
+      <Route component={Home} path="/" exact/>
+      <Route component={ProductDetails} path="/product-details" exact/>
+      </SingleProductContext>
+      <Route path="/cart" component={Cart}/>
+      </CartContextProvider>
+    </BrowserRouter>
     </div>
   );
 }
