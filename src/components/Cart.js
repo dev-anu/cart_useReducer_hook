@@ -12,7 +12,9 @@ function Cart() {
           <th>Product</th>
           <th>Price</th>
           <th>Add</th>
+          <th></th>
           <th>Minus</th>
+          <th></th>
           <th>Delete</th>
         </tr>
         {shoppingCart.map((product) => {
@@ -22,7 +24,9 @@ function Cart() {
               <td>{product.name}</td>
               <td style={{textAlign:"center"}}>{product.price}</td>
               <td style={{textAlign:"center"}}><button onClick={()=>dispatch({type:'INC',id:product.id,cart:product})}>+</button></td>
-              <td style={{textAlign:"center"}}><button>-</button></td>
+              <td>{product?.qty}</td>
+              <td style={{textAlign:"center"}}><button onClick={()=>dispatch({type:'DEC',id:product.id,cart:product})}>-</button></td>
+              <td style={{textAlign:"center"}}>{product.price * product.qty}</td>
               <td style={{textAlign:"center"}}><button>Delete</button></td>
             </tr>
           );

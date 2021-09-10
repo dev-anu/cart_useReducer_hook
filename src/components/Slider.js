@@ -10,7 +10,7 @@ function Slider() {
     ]
     return (
         <div style={{marginTop:"30px"}}>
-        <Carousel slides={slides} height={400}/>
+        <Carousel slides={slides} height={300}/>
         </div>
     )
 }
